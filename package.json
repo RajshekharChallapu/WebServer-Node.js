@@ -11,5 +11,8 @@
     "express"
   ],
   "author": "RAJA",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.17.1"
+  }
 }
