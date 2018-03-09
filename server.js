@@ -17,14 +17,14 @@ http.createServer(function(req, res) {
   var uri = url.parse(req.url).pathname;
   var fileName = path.join(process.cwd(), unescape(uri));
   console.log('Loading' + uri);
-  var state;
+  var stats;
 
   try {
     stats = fs.lstatSync(fileNmae);
 
   } catch (e) {
 
-    res.writeHead(404, {'Content-type': 'text/palin'});
+    res.writeHead(404, {'Content-type': 'text/plain'});
     res.write('404 Not Found\n');
     res.end();
     return;
@@ -46,4 +46,4 @@ http.createServer(function(req, res) {
     res.write('500 Internal Error\n');
     res.end();
   }
-}).listen(1337);
+}).listen(8080);
